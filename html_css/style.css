@@ -1,0 +1,50 @@
+#big_container { /* #은 id를 의미 */
+    width: 40rem;
+    padding: 2rem;
+    border: 0.5rem solid orange;
+}
+
+legend {
+    font-weight: bold;
+    font-size: larger;
+}
+
+a { /* 링크 기본 색 */
+    color: orange;
+}
+
+a:visited { /* 가상선택자, 링크 갔다오면 바뀜 */
+    color: gray;
+}
+
+a:hover { /* 가상선택자, 커서 올리면 바뀜 */
+    color: red;
+}
+
+button {
+    width: 7rem;
+    height: 3rem;
+    margin: 1rem 0.2rem; /* 상 우 하 좌 (시계방향) 2개만 적으면 상하, 좌우 */
+    text-decoration: underline;
+    color: white;
+    font-weight: bold;
+}
+
+#btn_submit {
+    background-color: orange;
+}
+
+#btn_reset {
+    background-color: gray;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* 단위: px em rem %
+    단위는 하나로 통일해서 하기
+    px : 절대적인 수치 -> 모니터 크기에 따라 깨질 수 있음
+    em : 가변적인 수치, 부모를 기준으로 함 -> 모니터 크기에 맞춰줌 
+    rem : 최상단을 기준으로 함. 추천
+*/
