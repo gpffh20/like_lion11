@@ -9,7 +9,7 @@
 <body>
     <h1>결과</h1>
     {% for word, value in words %}
-        <p>단어: {{word}} : 갯수: {{value}}</p>
+        <a href="https://ko.wikipedia.org/wiki/{{word}}"> <p>단어: {{word}} : 갯수: {{value}}</p> </a>
         <br/> 
     {% endfor %}
 
