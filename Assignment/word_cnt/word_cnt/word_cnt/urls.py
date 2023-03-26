@@ -1,4 +1,4 @@
-"""myproject URL Configuration
+"""word_cnt URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -15,12 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-import myapp.views
+import main.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', myapp.views.home),
-
-    # 127.0.0.1:8000/base로 접속시 함수 호출
-    path('base/', myapp.views.base),
+    path('', main.views.main, name='main'),
+    path('about/', main.views.about, name='about'),
+    path('result/', main.views.result, name='result')
 ]
