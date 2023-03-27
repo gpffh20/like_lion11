@@ -1,5 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+ 
+    $(function() {
+        $('textarea').on('keydown', function(event) {
+            if (event.keyCode == 13)
+                if (!event.shiftKey){
+                    event.preventDefault();
+                    $('#input').submit();
+                }
+        });
+        
+        $('#input').on('submit', function() {
+            button_click();
+        });
+        
+        function button_click() {
+            return;
+        }
+    });
+    </script>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +29,10 @@
 </head>
 <body>
     <h1>WordCount!</h1>
-    <form action={% url 'result' %} method="GET">
-        <textarea name="text" cols="30" rows="20"></textarea>
+    <form id="input" action={% url 'result' %} method="GET">
+        <textarea name="text" cols="30" rows="20" onkeydown="javascript:if(event.keyCode = 13)enterkey()"></textarea>
         <br>
-        <button type="submit">submit</button>
+        <button type="submit" onclick="button_click();">submit</button>
     </form>
     <br>
     <a href={% url 'about' %}>about</a>
