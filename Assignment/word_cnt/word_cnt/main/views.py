@@ -10,7 +10,7 @@ def about(request):
 def result(request):
     
     text = request.GET['text']
-    text = re.sub('[-=+,#/\?:^.@*\"※~ㆍ!』‘|\(\)\[\]`\'…》\”\“\’·\{\}\\\><%]', ' ', text)
+    text = re.sub('[-=+,#/\?:^.@*\"※~ㆍ!』‘|\(\)\[\]`…》\”\“·\{\}\\\><%]', ' ', text)
     text_list = text.split()
     text_dict = {}
     for word in text_list:
@@ -20,4 +20,4 @@ def result(request):
         else:
             text_dict[word] = 1
     words = sorted(text_dict.items(), key=lambda x:x[1], reverse=True)
-    return render(request, 'result.html', {'words' : words[:10]})
+    return render(request, 'result.html', {'words' : words})
