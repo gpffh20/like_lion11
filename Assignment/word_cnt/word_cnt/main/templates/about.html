@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>이 서비스는 워드카운트 입니다.</h2>
+    입력한 텍스트의 단어의 수를 세어줍니다.
+    <br>
+    단어는 특수문자, 공백, 엔터로 구분되며, 상위 15개의 단어만 나타납니다.
+    <br>
+    전체 단어의 빈도를 보고싶다면 전체보기를 눌러주세요!
+    <br>
+    <a href="{% url 'main' %}">메인으로 </a>
+</body>
+<style>
+    body{
+        background-color: #ffffe0;
+        text-align: center;
+    } 
+</style>
+</html>
